@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<!-- icon -->
+<link rel="shortcut icon" href="../icon.ico">
+<link rel="Bookmark" href="../icon.ico">
+  <title>Life </title>
+  <style>
+
+    body{
+      background: #eee;
+    }
+
+    .gallery{
+      list-style: none;
+      margin: 50px auto; padding: 0;
+      width: 642px; /* (200+10+4)x3 */
+      font-size: 0; /* fix inline-block spacing */
+    }
+
+    .gallery li{
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        width: 200px; height: 150px;
+        margin: 2px;
+        border: 5px solid #fff;
+        -moz-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+        -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+        box-shadow: 0 2px 2px rgba(0,0,0,.1);
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;        
+    }
+
+    .gallery:hover li:not(:hover){       
+        -webkit-filter: blur(2px) grayscale(1);
+        -moz-filter: blur(2px) grayscale(1);
+        -o-filter: blur(2px) grayscale(1);
+        -ms-filter: blur(2px) grayscale(1);
+        filter: blur(2px) grayscale(1);
+        opacity: .7; /* fallback */        
+    }
+
+    /* Demo page only */
+    #about{
+        color: #999;
+        text-align: center;
+        font: 0.9em Arial, Helvetica;
+    }
+
+    #about a{
+        color: #777;
+    }   
+  </style>
+</head>
+
+<body>
+	<div style="text-align:center;font-size: 40px;font-weight: 500;letter-spacing: 0px;font-family: segoe script,sans-serif;color:#fff;text-shadow:2px 2px 2px #888;">
+		<h3>C'est la vie</h3>
+	</div>
+  <ul class="gallery">
+      <li><a href="travel"><img src="../images/life1.jpg"></a></li>
+      <li><a href="cooking"><img src="../images/life2.jpg"></a></li>
+      <li><a href="singing"><img src="../images/life3.jpg"></a></li>
+      <li><a href="sports"><img src="../images/life4.jpg"></a></li>
+      <li><a href="qiuqiu"><img src="../images/life5.jpg"></a></li>
+      <li><a href="mystery"><img src="../images/life6.jpg"></a></li>      
+  </ul>
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+</body>
+</html>
