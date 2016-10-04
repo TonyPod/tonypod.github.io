@@ -82,7 +82,6 @@
 											<li><a class="scroll" href="#about"><span>ごあいさつ</span></a></li>
 											<li><a class="scroll" href="#project"><span>プロジェクト</span></a></li>
 											<li><a class="scroll" href="#contact"><span>アクセス</span></a></li>
-											<li><a href="life"><span>興味</span></a></li>
 											<li><a><span>言語</span></a>
 												<ul>
 													<li><a href="index.html">英語</a></li>
@@ -367,57 +366,14 @@
 				<div class="col-md-7 contact-right">
 					<h3>メッセージ</h3>
 					<div class="stripb"></div>
-					<form>
-						<input type="text" id="msg_name" name="Name" placeHolder="名前"
-							required="required"> <input type="text" id="msg_mail"
-							name="E-mail" placeHolder="メールアドレス" required="">
-						<textarea type="text" id="msg_content" name="Message"
-							placeHolder="メッセージ" required="required"></textarea>
-						<input type="button" value="送信" onclick="checkMsgForm()">
+					<form action="https://formspree.io/hc_pod711@163.com" method="POST">
+						<input type="text" name="name" placeHolder="Name"
+							required="required"> 
+						<input type="text" name="email" placeHolder="E-mail" required="">
+						<textarea type="text" name="message"
+							placeHolder="Message" required="required"></textarea>
+						<input type="submit" value="SEND">
 					</form>
-					<script>
-						var send_str;
-						function checkMsgForm() {
-							var msg_name = document.getElementById("msg_name");
-							var msg_mail = document.getElementById("msg_mail");
-							var msg_content = document
-									.getElementById("msg_content");
-
-							//检查输入是否合法
-							if (msg_name.value == "") {
-								msg_name.focus();
-								alert("名前を入れてください");
-								return;
-							}
-
-							if (msg_content.value == "") {
-								msg_content.focus();
-								alert("メッセージを入れてください");
-								return;
-							}
-
-							if (msg_mail.value == "E-mail") {
-								send_str = "Name=" + msg_name.value
-										+ "&Content=" + msg_content.value;
-							} else {
-								send_str = "Name=" + msg_name.value + "&Mail="
-										+ msg_mail.value + "&Content="
-										+ msg_content.value;
-							}
-
-							$.ajax({
-								type : "POST",
-								url : "msg.php",
-								data : send_str,
-								success : function(msg) {
-									alert("送信しました。ありがとうございます :)");
-								},
-								error : function(msg) {
-									alert("エラーが発生しました :(");
-								}
-							});
-						}
-					</script>
 				</div>
 				<div class="clearfix"></div>
 			</div>
